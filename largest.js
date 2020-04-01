@@ -1,20 +1,29 @@
-let x=304;
-let y=40;
-let z=50;
-if(x>y){
-    if(x>z){
-        console.log(x +"is largest");
+var express= require('express');
+var parser=require('body-parser');
+var apps=express();
+apps.use(parser.urlencoded({extended:false}));
+    apps.post('/larg',(req,res)=>{
+        var fx=req.body.x;
+        var fy=req.body.y;
+        var fz=req.body.z;
+if(fx>fy){
+    if(fx>fz){
+        res.json({"res":fx + "is largest"});
     }
     else{
-        console.log(z+"is largest")
+        res.json({"res":fz + "is largest"});
     }
     
 }
 else{
-    if(y>z){
-        console.log(y+"is largest");
+    if(fy>fz){
+        res.json({"res":fy + "is largest"});
     }
     else{
-        console.log(z+"is largest");
+        res.json({"res":fz + "is largest"});
     }
 }
+})
+apps.listen(3000,()=>{
+    console.log("server started");
+});
