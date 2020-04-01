@@ -24,6 +24,6 @@ else{
     }
 }
 })
-apps.listen(3000,()=>{
+apps.listen(process.env.PORT || 3000,()=>{
     console.log("server started");
 });
