@@ -7,7 +7,7 @@ apps.use(parser.urlencoded({extended:false}));
 //     res.json({"status":"hello"});
 //     });
 
-    apps.post('/larg',(req,res)=>{
+    apps.get('/larg',(req,res)=>{
         var fx=req.body.x;
         var fy=req.body.y;
         var fz=req.body.z;
