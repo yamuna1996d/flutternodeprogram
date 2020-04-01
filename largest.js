@@ -2,10 +2,11 @@ var express= require('express');
 var parser=require('body-parser');
 var apps=express();
 apps.use(parser.urlencoded({extended:false}));
-app.get('/',(req,res)=>{
+
+apps.get('/',(req,res)=>{
     res.json({"status":"hello"});
     });
-    
+
     apps.post('/larg',(req,res)=>{
         var fx=req.body.x;
         var fy=req.body.y;
