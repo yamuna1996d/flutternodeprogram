@@ -8,9 +8,9 @@ apps.use(parser.urlencoded({extended:false}));
 //     });
 
     apps.get('/',(req,res)=>{
-        var fx=req.body.x;
-        var fy=req.body.y;
-        var fz=req.body.z;
+        var fx=80;
+        var fy=40;
+        var fz=50;
 if(fx>fy){
     if(fx>fz){
         res.json({"res":fx + "is largest"});
