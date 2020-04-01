@@ -3,9 +3,9 @@ var parser=require('body-parser');
 var apps=express();
 apps.use(parser.urlencoded({extended:false}));
 
-apps.get('/',(req,res)=>{
-    res.json({"status":"hello"});
-    });
+// apps.get('/',(req,res)=>{
+//     res.json({"status":"hello"});
+//     });
 
     apps.post('/larg',(req,res)=>{
         var fx=req.body.x;
